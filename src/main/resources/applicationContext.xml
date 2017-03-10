@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Benzin16" class="com.parts.dieselengines.Benzine16">
+
+    </bean>
+    <bean id="MitsubishiEngine" class="com.parts.BenzinEngine">
+        <constructor-arg ref="Benzin16"/>
+    </bean>
+    <bean id="MitsubishiCar" class="com.cars.MitsubihiCar">
+        <constructor-arg ref="MitsubishiEngine"/>
+    </bean>
+</beans>
